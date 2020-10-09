@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <table *ngFor="let plasticos of plasticos">
+    <thead>
+      <th>ID</th>
+      <th>Cantidad</th>
+      <th>Dia semana</th>
+      <th>Fecha</th>
+      <th>Update Data</th>
+    </thead>
+    <tbody>
+    <tr>
+      <td >
+          {{plasticos.id}}
+      </td>
+      <td>
+        <ion-input class="ion-text-center" placeholder={{plasticos.cantidad}} name="Cantidad"></ion-input>
+      </td>
+      <td>
+        <ion-input class="ion-text-center" placeholder={{plasticos.dia}} name="dia"></ion-input>
+      </td>
+      <td>
+        <ion-datetime class="ion-text-center" placeholder={{plasticos.fecha}}></ion-datetime>
+      </td>
+      <td>
+        <ion-button color="warning" (click)="doupdate(plasticos.id,plasticos)">Update Data</ion-button>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</ion-content>

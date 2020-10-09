@@ -1,0 +1,22 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="light" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Grafico Unido</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list-header color="light">Dia vs Volumen</ion-list-header>
+  <ion-button padding color="success" (click)="fetchdata()" expand="full">Cargar</ion-button>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>comparacion entre plastico, vidrio, metal</ion-card-subtitle>
+      <ion-card-title>Grafico Unido</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #hrzChartUnido></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
